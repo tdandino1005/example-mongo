@@ -20,6 +20,9 @@ const controller = {
   readAll() {
     return bookCollection.find().toArray();
   },
+  destroyOne(id) {
+    return bookCollection.deleteOne({ _id: new ObjectId(id) });
+  },
 };
 
 export default controller;
